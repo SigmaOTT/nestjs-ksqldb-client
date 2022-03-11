@@ -1,9 +1,8 @@
 # nestjs-ksqldb-client
 
-This repo base on [ksqldb-client](https://github.com/hanFengSan/nestjs-agenda) and wrap decorator agenda job defined
-[Agenda](https://github.com/agenda/agenda) module for [Nestjs](https://github.com/nestjs/nest)
+This repo base on [ksqldb-client](@streaminy/ksqldb-client)  for [Nestjs](https://github.com/nestjs/nest)
 
-Agenda version is `^4.1.3`
+ksqldb-client version is `^1.0.5`
 
 # Installation
 
@@ -25,7 +24,7 @@ _Sync register_:
 import { KsqldbModule } from '@sigmaott/nestjs-ksqldb-client';
 
 @Module({
-  imports: [KsqldbModule.forRoot(KsqldbModule, { host: 'http://', port: 8088})], // Same as configuring an agenda
+  imports: [KsqldbModule.forRoot(KsqldbModule, { host: 'http://', port: 8088})], // Same as configuring an ksqldb-client
   providers: [...],
 })
 export class FooModule {}
@@ -51,11 +50,11 @@ import { KsqldbModule } from '@sigmaott/nestjs-ksqldb-client';
 export class FooModule {}
 ```
 
-**2. Inject `KsqldbModule` (AgendaService is a instance of Agenda):**
+**2. Inject `KsqldbModule` (KsqldbClientService is a instance of KsqldbClient):**
 
 ```TypeScript
 import { Injectable } from '@nestjs/common';
-import { KsqldbClientService } from '@sigmaott/nestjs-agenda;
+import { KsqldbClientService } from '@sigmaott/nestjs-ksqldb-client;
 
 @Injectable()
 export class FooService {
