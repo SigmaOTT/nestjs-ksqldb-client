@@ -1,0 +1,8 @@
+lib/
+node-modules/
+.husky/
+.eslintrc.js
+.prettierrc
+commitlint.config.js
+.lintstagedrc.json
+.gitignore
